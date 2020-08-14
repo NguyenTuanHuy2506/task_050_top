@@ -1,0 +1,199 @@
+@charset "UTF-8";
+@import 'functions_responsive.scss';
+@import 'assets/colors.scss';
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+    @media screen and (max-width: 768px) {
+        font-size: 1.4rem;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body>main {
+    -ms-overflow-x: hidden;
+}
+
+@supports (-ms-ime-align: auto) {
+    body>main {
+        overflow: hidden;
+    }
+}
+
+
+/*
+    font family
+
+    font-family: 'Montserrat', sans-serif;
+*/
+$font-mon: 'Montserrat', sans-serif;
+/* nav link */
+.nav-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+} 
+
+// nav-scroll
+.nav-scroll {
+    // size
+    width: 2.3rem;
+    height: 3.5rem;
+    // border
+    border-radius: 2rem;
+    border: .1rem solid $c-sub-color;
+    //position
+    position: absolute;
+    bottom: calc((100vw / 1600)*66);
+    left: 50%;
+    // transform
+    transform: translateX(-50%);
+
+    &::after {
+        // content
+        content: attr(data-content);
+        // color
+        color: $c-sub-color;
+        //font
+        font-family: $font-mon;
+        font-size: 1.4rem;
+        font-weight: bold;
+        // position
+        position: absolute;
+        bottom: -2.4rem;
+        // transform
+        transform: translateX(-25%);
+
+    }
+
+    &::before {
+        content: '';
+        // size
+        width: .5rem;
+        height: .5rem;
+        // color
+        background-color: $c-sub-color;
+        // border
+        border-radius: 50%;
+        // position
+        position: absolute;
+        top: .6rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+}
+
+.font-montserrat {
+    font-family: $font-mon;
+}
+
+/* read more button */
+.more-button {
+    // size
+    width: 100%;
+    max-width: 26.5rem;
+    height: 6rem;
+    // text-align
+    text-align: left;
+    // padding
+    padding: 0 3rem;
+    // border
+    outline: none !important;
+    border: .1rem solid $c-main-color;
+    // color
+    color: #fff;
+    background-color: transparent;
+    // font
+    font-size: 1.6rem;
+    font-family: $font-mon;
+    line-height: 6rem;
+    // position
+    position: relative;
+    // transition
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: #fff;
+        color: $c-main-color;
+
+        &::before {
+            left: 50%;
+            right: 50%;
+        }
+
+        &::after {
+            border-color: $c-main-color;
+        }
+    }
+
+    &::after {
+        content: '';
+        // size
+        width: 1rem;
+        height: 1rem;
+        // color
+        background-color: transparent;
+        // border
+        border-top: .2rem solid #fff;
+        border-right: .2rem solid #fff;
+        // position
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        // transform        
+        transform: translateY(-50%) rotate(45deg);
+        // transition
+        transition: all .3s ease;
+    }
+    &::before{
+        content: '';
+        // position
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        // color
+        background-color: $c-main-color;
+        // transition
+        transition: all .3s ease;
+        z-index: -1;
+    }
+}
+
+// title
+.main-title {
+    // font
+    font-weight: bold;
+    font-size: 3.6rem;
+    // color
+    color: $c-main-color;
+    // letter-spacing
+    letter-spacing: .5rem;
+}
+
+// description
+.p-description {
+    // font
+    font-weight: bold;
+    font-size: 2rem;
+    color: #333;
+    // line-height
+    line-height: 4rem;
+    // letter-spacing
+    letter-spacing: .3rem;
+}

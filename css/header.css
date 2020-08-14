@@ -1,0 +1,44 @@
+/*
+    font family
+
+    font-family: 'Montserrat', sans-serif;
+*/
+/* header */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1030;
+}
+.header__logo {
+  /* size */
+  width: 100%;
+  max-width: 26.5rem;
+  height: 14rem;
+  /* font */
+  font-size: 4.6rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  /* color */
+  color: #000;
+  /* margin */
+  margin-left: 24rem;
+  /* display flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position */
+  position: relative;
+}
+.header__logo:hover {
+  opacity: 0.8;
+}
+.header__logo span {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  color: #0a884b;
+}
+
+/*# sourceMappingURL=header.css.map */
