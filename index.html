@@ -19,6 +19,7 @@
 
 	
 	<!-- build:addcss -->
+	<link href="css/animate.css" rel="stylesheet">
 	<link href="css/common.css" rel="stylesheet">
 	<link href="css/header.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
@@ -41,6 +42,41 @@
 			<a class="nav-link" href="#"></a>
 		</h1>
 
+		<button class="hambuger-button animated fadeIn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+		<div class="primary-menu animated">
+			<ul>
+				<li class="menu__link">
+					メニュー
+					<a class="nav-link" href="#"></a>
+				</li>
+				<li class="menu__link">
+					メニュー
+					<a class="nav-link" href="#"></a>
+				</li>
+				<li class="menu__link">
+					メニュー
+					<a class="nav-link" href="#"></a>
+				</li>
+				<li class="menu__link">
+					メニュー
+					<a class="nav-link" href="#"></a>
+				</li>
+				<li class="menu__link">
+					メニュー
+					<a class="nav-link" href="#"></a>
+				</li>
+				<li class="menu__entry">
+					ENTRY
+					<a class="nav-link" href="#"></a>
+				</li>
+			</ul>
+		</div>
+
 	</header>
 	<main>
 	<!-- build:content -->
@@ -51,13 +87,13 @@
 				<img src="images/img_main01.jpg" alt="未来をつくる、世界に響く、テクノロジー。">
 			</div>
 
-			<div class="mv__content">
+			<div class="mv__content animated fadeIn">
 				<h3 class="mv__title">
 					未来をつくる、<br />世界に響く、<br />テクノロジー。
 				</h3>
 			</div>
 
-			<a class="nav-scroll" data-content="SCROLL" href="#"></a>
+			<a class="nav-scroll animated fadeIn" data-content="SCROLL" href="#"></a>
 		</section>
 
 		<!-- secondary-menu -->
@@ -65,7 +101,7 @@
 
 			<div class="container">
 
-				<ul>
+				<ul class="animated fadeIn">
 					<li class="menu__link">
 						メニュー
 						<a class="nav-link" href="#"></a>
@@ -103,10 +139,10 @@
 
 				<ul class="message__inner">
 
-					<li class="message__img">
+					<li class="message__img animated fadeIn">
 						<img src="images/img_message.png" alt="想いと理念">
 					</li>
-					<li class="message__content">
+					<li class="message__content animated fadeInLeft">
 						<h3 class="main-title">想いと理念</h3>
 						<p class="p-description">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
 						<button class="more-button">READ MORE</button>
@@ -122,21 +158,21 @@
 		<section class="business">
 
 			<ul class="business__img">
-				<li>
+				<li class="animated fadeInLeft">
 					<img src="images/img_business01.jpg" alt="事業と歴史">
 				</li>
-				<li>
+				<li class="animated fadeInLeft" data-wow-delay=".2s">
 					<img src="images/img_business02.jpg" alt="事業と歴史">
 				</li>
-				<li>
+				<li class="animated fadeInLeft" data-wow-delay=".4s">
 					<img src="images/img_business03.jpg" alt="事業と歴史">
 				</li>
-				<li>
+				<li class="animated fadeInLeft" data-wow-delay=".2s">
 					<img src="images/img_business04.jpg" alt="事業と歴史">
 				</li>
 			</ul>
 			<div class="container">
-				<div class="business__content">
+				<div class="business__content animated fadeInLeft">
 					<h3 class="main-title">事業と歴史</h3>
 					<p class="p-description">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。</p>
 					<button class="more-button">READ MORE</button>
@@ -149,10 +185,10 @@
 		<section class="working">
 
 			<ul>
-				<li class="working__img">
+				<li class="working__img animated fadeIn">
 					<img src="images/img_person.jpg" alt="仕事と人">
 				</li>
-				<li class="working__content">
+				<li class="working__content animated fadeIn">
 					<h3 class="main-title">事業と歴史</h3>
 					<p class="p-description">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
 					<button class="more-button">READ MORE</button>
@@ -164,12 +200,12 @@
 		<!-- work-style -->
 		<section class="styling">
 			<div class="container">
-				<h3 class="main-title">事業と歴史</h3>
-				<p class="p-description">充実の福利厚生、独自の制度でしっかりと成長できる環境が整っています。</p>
+				<h3 class="main-title animated fadeInLeft">事業と歴史</h3>
+				<p class="p-description animated fadeInRight">充実の福利厚生、独自の制度でしっかりと成長できる環境が整っています。</p>
 				
 				<div class="styling__list">
 					<ul>
-						<li class="outline__circle">
+						<li class="outline__circle animated fadeInLeft">
 							<img src="images/icon_workstyle01.png" alt="教育制度">
 						</li>
 						<li>
@@ -177,7 +213,7 @@
 						</li>
 					</ul>
 					<ul>
-						<li class="outline__circle">
+						<li class="outline__circle animated fadeInRight">
 							<img src="images/icon_workstyle02.png" alt="海外研修制度">
 						</li>
 						<li>
@@ -185,7 +221,7 @@
 						</li>
 					</ul>
 					<ul>
-						<li class="outline__circle">
+						<li class="outline__circle animated fadeInLeft">
 							<img src="images/icon_workstyle03.png" alt="福利厚生">
 						</li>
 						<li>
@@ -198,10 +234,43 @@
 
 		</section>
 
+		<!-- company and recruitment -->
+		<section class="recruit">
+
+			<div class="container">
+
+				<ul class="recruit__inner">
+
+					<li class="recruit__img animated fadeIn">
+						<img src="images/img_company.png" alt="会社と採用情報">
+					</li>
+					
+					<li class="recruit__content animated fadeInLeft">
+						<h3 class="main-title">会社と採用情報</h3>
+						<p class="p-description">募集要項、採用フローやFAQはこちらから<span class="f-comma">。</span></p>
+						<button class="more-button">READ MORE</button>
+					</li>
+				</ul>
+				
+			</div>
+
+		</section>
+
 	</main>
-	<footer>
+	<footer class="footer">
 	<!-- build:footer -->
+		<div class="container">
+			<ul class="footer__inner">
+				<li class="icon--square-2">
+					Corporate site
+				</li>
+				<li>
+					©0000 SAMPLE Inc. All Rights Reserved.
+				</li>
+			</ul>
+		</div>
 	</footer>
+	<a class="to-top-button animated bounceInUp"><span></span><span></span></a>
 	<script src="assets/js/jquery-2.2.4.min.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/index.js"></script>

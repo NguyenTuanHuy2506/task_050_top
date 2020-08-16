@@ -62,6 +62,10 @@ $font-mon: 'Montserrat', sans-serif;
     // transform
     transform: translateX(-50%);
 
+    @media only screen and (max-width: 767px) {
+        display: none;
+    }
+
     &::after {
         // content
         content: attr(data-content);
@@ -126,6 +130,10 @@ $font-mon: 'Montserrat', sans-serif;
     // transition
     transition: all .3s ease;
 
+    @include mobile {
+        max-width: 100%;
+    }
+
     &:hover {
         background-color: #fff;
         color: $c-main-color;
@@ -184,6 +192,10 @@ $font-mon: 'Montserrat', sans-serif;
     color: $c-main-color;
     // letter-spacing
     letter-spacing: .5rem;
+
+    @include mobile {
+        font-size: 2.6rem;
+    }
 }
 
 // description
@@ -196,4 +208,131 @@ $font-mon: 'Montserrat', sans-serif;
     line-height: 4rem;
     // letter-spacing
     letter-spacing: .3rem;
+
+    @media only screen and (max-width: 767px){
+        font-size: 1.6rem;
+    }
+}
+
+// comma
+.f-comma {
+    display: inline-block;
+    max-width: 1.2rem;
+}
+
+//square 2
+.icon--square-2 {
+    position: relative;
+
+    &::after,
+    &::before {
+        content: '';
+        // size
+        width: .7rem;
+        height: .7rem;
+        // position
+        position: absolute;
+        right: 0;
+        // border
+        border: .1rem solid transparent;
+        background-color: transparent;
+    }
+
+    &::after {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &::before {
+        top: calc(50% + 2px);
+        right: 2px;
+        transform: translateY(-50%);
+    }
+}
+/* hambuger-button */
+.hambuger-button{
+    width: 4.5rem;
+    height: 3rem;
+    position: fixed;
+    border: 0;
+    top: 5rem;
+    right: 4rem;
+    outline: none !important;
+    background-color: transparent;
+    display: none;
+    
+    &.is-show {
+        display: block;
+    }    
+
+    @include ipadpro{
+        top: 2.5rem;
+        display: block;
+    }
+
+    @include mobile {
+        right: 2rem;
+    }
+
+    span{
+        width: 4.6rem;
+        height: .2rem;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        transition: all .3s ease;
+
+        &:nth-of-type(1){
+            top: 0;
+        }
+        &:nth-of-type(2){
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:nth-of-type(3){
+            bottom: 0;
+        }
+    }
+        
+    &.active{
+        span:nth-of-type(1){
+            transform: translateY(1.35rem) rotate(45deg);
+        }
+        span:nth-of-type(2){
+            opacity: 0;
+        }
+        span:nth-of-type(3){
+            transform: translateY(-1.35rem) rotate(135deg);
+        }
+    }
+}
+
+// to top button
+.to-top-button{
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    background-color: #c01920;
+    right: 5rem;
+    bottom: 5rem;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;
+    transition: all .3s ease;
+    &.active{
+        display: flex;
+    }
+    @include mobile{
+        right: 3rem;
+        bottom: 3rem;
+    }
+    span{
+        width: 3rem;
+        height: .2rem;
+        background-color: #fff;
+        &:nth-child(1){transform: translateX(.4rem) rotate(-45deg);}
+        &:nth-child(2){transform: translateX(-.4rem) rotate(45deg);}
+    }
+    &:hover{opacity: .8;}
 }

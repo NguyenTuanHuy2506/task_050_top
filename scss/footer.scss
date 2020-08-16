@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@import 'functions_responsive.scss';
+@import 'assets/colors.scss';
+
+// footer
+.footer {
+    // size
+    width: 100%;
+    // color
+    background-color: #8ed790;
+
+    @include ipadpro{
+        padding: 0 2rem;
+    }
+
+    &__inner {
+        // size
+        width: 100%;
+        min-height: 8rem;
+        // display
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        li {
+            // font
+            font-weight: bold;
+            font-size: 1.4rem;
+            font-family: 'Montserrat', sans-serif;
+            // color
+            color: #fff;
+            letter-spacing: .2rem;
+        }
+        
+        .icon--square-2 {
+            padding-right: 1.5rem;
+
+            @include mobile {
+                margin-bottom: 2rem;
+            }
+
+            &::after {
+                border-color: #fff;
+            }
+
+            &::before {
+                border-left-color: #fff;
+                border-bottom-color: #fff;
+                
+            }
+        }
+    }
+}
