@@ -1,325 +1,294 @@
 @charset "UTF-8";
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
 }
-
 @media screen and (max-width: 768px) {
-    body {
-        font-size: 1.4rem;
-    }
+  body {
+    font-size: 1.4rem;
+  }
 }
-
 @media screen and (max-width: 768px) {
-    body {
-        padding: 0;
-    }
+  body {
+    padding: 0;
+  }
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-body>main {
-    -ms-overflow-x: hidden;
+body > main {
+  -ms-overflow-x: hidden;
 }
 
 @supports (-ms-ime-align: auto) {
-    body>main {
-        overflow: hidden;
-    }
+  body > main {
+    overflow: hidden;
+  }
 }
-
 /*
     font family
 
     font-family: 'Montserrat', sans-serif;
 */
+.d-none {
+  display: none;
+}
+
 /* nav link */
 .nav-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .nav-scroll {
-    width: 2.3rem;
-    height: 3.5rem;
-    border-radius: 2rem;
-    border: 0.1rem solid #8ed790;
-    position: absolute;
-    bottom: calc((100vw / 1600)*66);
-    left: 50%;
-    transform: translateX(-50%);
+  width: 2.3rem;
+  height: 3.5rem;
+  border-radius: 2rem;
+  border: 0.1rem solid #8ed790;
+  position: absolute;
+  bottom: calc((100vw / 1600)*66);
+  left: 50%;
+  transform: translateX(-50%);
 }
-
 @media only screen and (max-width: 767px) {
-    .nav-scroll {
-        display: none;
-    }
+  .nav-scroll {
+    display: none;
+  }
 }
-
 .nav-scroll::after {
-    content: attr(data-content);
-    color: #8ed790;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.4rem;
-    font-weight: bold;
-    position: absolute;
-    bottom: -2.4rem;
-    transform: translateX(-25%);
+  content: attr(data-content);
+  color: #8ed790;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  position: absolute;
+  bottom: -2.4rem;
+  transform: translateX(-25%);
 }
-
 .nav-scroll::before {
-    content: '';
-    width: .5rem;
-    height: .5rem;
-    background-color: #8ed790;
-    border-radius: 50%;
-    position: absolute;
-    top: .6rem;
-    left: 50%;
-    transform: translateX(-50%);
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #8ed790;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .font-montserrat {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* read more button */
 .more-button {
-    width: 100%;
-    max-width: 26.5rem;
-    height: 6rem;
-    text-align: left;
-    padding: 0 3rem;
-    outline: none !important;
-    border: 0.1rem solid #56c359;
-    color: #fff;
-    background-color: transparent;
-    font-size: 1.6rem;
-    font-family: "Montserrat", sans-serif;
-    line-height: 6rem;
-    position: relative;
-    transition: all .3s ease;
+  width: 100%;
+  max-width: 26.5rem;
+  height: 6rem;
+  text-align: left;
+  padding: 0 3rem;
+  outline: none !important;
+  border: 0.1rem solid #56c359;
+  color: #fff;
+  background-color: transparent;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 6rem;
+  position: relative;
+  transition: all 0.3s ease;
 }
-
 @media screen and (max-width: 768px) {
-    .more-button {
-        max-width: 100%;
-    }
+  .more-button {
+    max-width: 100%;
+  }
 }
-
 .more-button:hover {
-    background-color: #fff;
-    color: #56c359;
+  background-color: #fff;
+  color: #56c359;
 }
-
 .more-button:hover::before {
-    left: 50%;
-    right: 50%;
+  left: 50%;
+  right: 50%;
 }
-
 .more-button:hover::after {
-    border-color: #56c359;
+  border-color: #56c359;
 }
-
 .more-button::after {
-    content: '';
-    width: 1rem;
-    height: 1rem;
-    background-color: transparent;
-    border-top: .2rem solid #fff;
-    border-right: .2rem solid #fff;
-    position: absolute;
-    top: 50%;
-    right: 2rem;
-    transform: translateY(-50%) rotate(45deg);
-    transition: all .3s ease;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  border-top: 0.2rem solid #fff;
+  border-right: 0.2rem solid #fff;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%) rotate(45deg);
+  transition: all 0.3s ease;
 }
-
 .more-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #56c359;
-    transition: all .3s ease;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #56c359;
+  transition: all 0.3s ease;
+  z-index: -1;
 }
 
 .main-title {
-    font-weight: bold;
-    font-size: 3.6rem;
-    color: #56c359;
-    letter-spacing: .5rem;
+  font-weight: bold;
+  font-size: 3.6rem;
+  color: #56c359;
+  letter-spacing: 0.5rem;
 }
-
 @media screen and (max-width: 768px) {
-    .main-title {
-        font-size: 2.6rem;
-    }
+  .main-title {
+    font-size: 2.6rem;
+  }
 }
 
 .p-description {
-    font-weight: bold;
-    font-size: 2rem;
-    color: #333;
-    line-height: 4rem;
-    letter-spacing: .3rem;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #333;
+  line-height: 4rem;
+  letter-spacing: 0.3rem;
 }
-
 @media only screen and (max-width: 767px) {
-    .p-description {
-        font-size: 1.6rem;
-    }
+  .p-description {
+    font-size: 1.6rem;
+  }
 }
 
 .f-comma {
-    display: inline-block;
-    max-width: 1.2rem;
+  display: inline-block;
+  max-width: 1.2rem;
 }
 
 .icon--square-2 {
-    position: relative;
+  position: relative;
 }
-
-.icon--square-2::after,
-.icon--square-2::before {
-    content: '';
-    width: .7rem;
-    height: .7rem;
-    position: absolute;
-    right: 0;
-    border: .1rem solid transparent;
-    background-color: transparent;
+.icon--square-2::after, .icon--square-2::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  position: absolute;
+  right: 0;
+  border: 0.1rem solid transparent;
+  background-color: transparent;
 }
-
 .icon--square-2::after {
-    top: 50%;
-    transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
 }
-
 .icon--square-2::before {
-    top: calc(50% + 2px);
-    right: 2px;
-    transform: translateY(-50%);
+  top: calc(50% + 2px);
+  right: 2px;
+  transform: translateY(-50%);
 }
 
 /* hambuger-button */
 .hambuger-button {
-    width: 4.5rem;
-    height: 3rem;
-    position: fixed;
-    border: 0;
-    top: 5rem;
-    right: 4rem;
-    outline: none !important;
-    background-color: transparent;
-    display: none;
+  width: 4.5rem;
+  height: 3rem;
+  position: fixed;
+  border: 0;
+  top: 5rem;
+  right: 4rem;
+  outline: none !important;
+  background-color: transparent;
+  display: none;
 }
-
 .hambuger-button.is-show {
-    display: block;
+  display: block;
 }
-
 @media screen and (max-width: 1024px) {
-    .hambuger-button {
-        top: 2.5rem;
-        display: block;
-    }
+  .hambuger-button {
+    top: 2.5rem;
+    display: block;
+  }
 }
-
 @media screen and (max-width: 768px) {
-    .hambuger-button {
-        right: 2rem;
-    }
+  .hambuger-button {
+    right: 2rem;
+  }
 }
-
 .hambuger-button span {
-    width: 4.6rem;
-    height: .2rem;
-    background-color: #000;
-    position: absolute;
-    left: 0;
-    transition: all .3s ease;
+  width: 4.6rem;
+  height: 0.2rem;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
 }
-
 .hambuger-button span:nth-of-type(1) {
-    top: 0;
+  top: 0;
 }
-
 .hambuger-button span:nth-of-type(2) {
-    top: 50%;
-    transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
 }
-
 .hambuger-button span:nth-of-type(3) {
-    bottom: 0;
+  bottom: 0;
 }
-
 .hambuger-button.active span:nth-of-type(1) {
-    transform: translateY(1.35rem) rotate(45deg);
+  transform: translateY(1.35rem) rotate(45deg);
 }
-
 .hambuger-button.active span:nth-of-type(2) {
-    opacity: 0;
+  opacity: 0;
 }
-
 .hambuger-button.active span:nth-of-type(3) {
-    transform: translateY(-1.35rem) rotate(135deg);
+  transform: translateY(-1.35rem) rotate(135deg);
 }
 
 .to-top-button {
-    position: fixed;
-    width: 5rem;
-    height: 5rem;
-    background-color: #c01920;
-    right: 5rem;
-    bottom: 5rem;
-    display: none;
-    align-items: center;
-    justify-content: space-around;
-    z-index: 1000;
-    transition: all .3s ease;
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  background-color: #c01920;
+  right: 5rem;
+  bottom: 5rem;
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
-
 .to-top-button.active {
-    display: flex;
+  display: flex;
 }
-
 @media screen and (max-width: 768px) {
-    .to-top-button {
-        right: 3rem;
-        bottom: 3rem;
-    }
+  .to-top-button {
+    right: 3rem;
+    bottom: 3rem;
+  }
 }
-
 .to-top-button span {
-    width: 3rem;
-    height: .2rem;
-    background-color: #fff;
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #fff;
 }
-
 .to-top-button span:nth-child(1) {
-    transform: translateX(0.4rem) rotate(-45deg);
+  transform: translateX(0.4rem) rotate(-45deg);
 }
-
 .to-top-button span:nth-child(2) {
-    transform: translateX(-0.4rem) rotate(45deg);
+  transform: translateX(-0.4rem) rotate(45deg);
 }
-
 .to-top-button:hover {
-    opacity: .8;
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=common.css.map */

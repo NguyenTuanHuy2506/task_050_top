@@ -88,6 +88,8 @@ $('.mv').bind('mousewheel', function(e) {
         $('html, body').animate({
              scrollTop: $('.message').offset().top - _headerHeight }, 500, function(){_mvScroll = 0;});
 }});
+
+// nav srcoll
 $('.nav-scroll').click(function(event) {
     /* Act on the event */
     $('html, body').animate({
@@ -95,6 +97,12 @@ $('.nav-scroll').click(function(event) {
     }, 'slow', 'linear');
     return false;
 });
+
+// nav link
+$('.nav-link').click(function(){
+    return false;
+});
+
 //----------delay function-------//
 function delayF(func, timed){
     let timeout;

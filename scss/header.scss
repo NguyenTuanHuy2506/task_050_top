@@ -115,7 +115,7 @@
 	// position
 	position: fixed;
 	// color
-	background-color: rgba(#000, .7);
+	background-color: rgba($c-sub-color, 1);
 	display: none;
 
 	&.active {
