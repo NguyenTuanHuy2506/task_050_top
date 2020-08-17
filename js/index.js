@@ -88,7 +88,13 @@ $('.mv').bind('mousewheel', function(e) {
         $('html, body').animate({
              scrollTop: $('.message').offset().top - _headerHeight }, 500, function(){_mvScroll = 0;});
 }});
-
+$('.nav-scroll').click(function(event) {
+    /* Act on the event */
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 'slow', 'linear');
+    return false;
+});
 //----------delay function-------//
 function delayF(func, timed){
     let timeout;

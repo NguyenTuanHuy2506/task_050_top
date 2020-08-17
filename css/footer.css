@@ -1,55 +1,48 @@
 .footer {
-    width: 100%;
-    background-color: #8ed790;
+  width: 100%;
+  background-color: #8ed790;
 }
-
 @media screen and (max-width: 1024px) {
-    .footer {
-        padding: 0 2rem;
-    }
+  .footer {
+    padding: 0 2rem;
+  }
 }
-
 .footer__inner {
-    width: 100%;
-    min-height: 8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  min-height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  line-height: 8rem;
 }
-
 @media screen and (max-width: 768px) {
-    .footer__inner {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-    }
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 1;
+  }
 }
-
 .footer__inner li {
-    font-weight: bold;
-    font-size: 1.4rem;
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
-    letter-spacing: .2rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  letter-spacing: 0.2rem;
 }
-
 .footer__inner .icon--square-2 {
-    padding-right: 1.5rem;
+  padding-right: 1.5rem;
 }
-
 @media screen and (max-width: 768px) {
-    .footer__inner .icon--square-2 {
-        margin-bottom: 2rem;
-    }
+  .footer__inner .icon--square-2 {
+    margin-bottom: 2rem;
+  }
 }
-
 .footer__inner .icon--square-2::after {
-    border-color: #fff;
+  border-color: #fff;
 }
-
 .footer__inner .icon--square-2::before {
-    border-left-color: #fff;
-    border-bottom-color: #fff;
+  border-left-color: #fff;
+  border-bottom-color: #fff;
 }
 
 /*# sourceMappingURL=footer.css.map */

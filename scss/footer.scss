@@ -20,12 +20,14 @@
         // display
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
+        line-height: 8rem;
 
         @include mobile {
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
+            line-height: 1;
         }
 
         li {
