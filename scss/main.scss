@@ -66,15 +66,17 @@
 		   	/*font*/
 		   	font-weight: bold;
 		   	font-size: calc((100vw / 1600) * 50);
+		   	letter-spacing: .6rem;
 		   	// color
 		   	color: $c-main-color;
 			// center
 			text-align: center;
 			// line-height
-			line-height: 7.1rem;
+			line-height: 7.5rem;
 
 			@include ipadpro{
 				line-height: 4rem;
+				letter-spacing: .2rem;
 			}
 
 			@include mobile {
